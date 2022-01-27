@@ -1,0 +1,145 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+@keyframes moon {
+  from {top: 1000px;}
+  to {top: 10px;}
+}
+
+@keyframes cloud1 {
+  from {left: -350px;}
+  to {left: 200px;}
+}
+
+@keyframes cloud2 {
+  from {right: 1000px;}
+  to {right: 300px;}
+}
+
+.Circle {
+  position: relative;
+  top:10px;
+  width: 400px;
+  height: 400px;
+  margin:auto;
+  background-image: linear-gradient(#404654, #dfe2df);
+  border-radius: 50%;
+  animation-name: moon;
+  animation-duration: 3s;
+  z-index: -1;
+}
+
+.OpenButton {
+    background: linear-gradient(#edf2ef, #ABAEB0); /* Green */
+    border: none;
+    color: white;
+    width : 200px;
+    text-align: center;
+    padding: 15px 32px;
+    font-size: 16px
+}
+
+.Title {
+  color: #ADD0DF;
+  border: 1px solid;
+  margin-top: 50px;
+  border-color: #9EA2A4;
+  text-align : center;
+  margin-left : auto;
+  margin-right:auto;
+  z-index: 100;
+}
+
+.Container {
+  border: 1px solid #BED3DC;
+}
+
+.Table {
+    text-align : center;
+    margin: 10px;
+    border: 1px solid #BDDEEB;
+    margin-left : auto;
+    margin-right:auto;
+}
+
+.Box {
+  color: #ADD0DF;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.Cloud {
+	width: 350px; height: 120px;
+	
+	background: #f2f9fe;
+	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	z-index: -1;
+	
+  top: 100px;
+  left: 200px;
+	position: absolute;
+  animation-name: cloud1;
+  animation-duration: 3s;
+
+}
+.Cloud2 {
+	width: 350px; height: 120px;
+	
+	background: #f2f9fe;
+	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	z-index: -1;
+	
+  top: 300px;
+  right: 300px;
+	position: absolute;
+  animation-name: cloud2;
+  animation-duration: 3s;
+
+}
+
+
+.Cloud:after, .Cloud:before, .Cloud2:after, .Cloud2:before {
+	content: '';
+	position: absolute;
+	background: #f2f9fe;
+}
+
+.Cloud:after, .Cloud2:after {
+	width: 100px; height: 100px;
+	top: -50px; left: 50px;
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+.Cloud:before, .Cloud2:before {
+	width: 180px; height: 180px;
+	top: -90px; right: 50px;
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+}
