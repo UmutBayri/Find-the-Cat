@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './App.css';
 
 class FindtheCat extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
           name : this.props.name,
-          boxes : [true, false, false],
+          boxes : this.shuffleArray([true, false, false]),
       };
   }
+
+   shuffleArray(array) {
+    const shuffledArray = array.sort((a, b) => 0.5 - Math.random());
+    return shuffledArray;
+    }
 
   render() {
       return (
